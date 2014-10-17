@@ -20,6 +20,11 @@ body > main {
   padding: $gutter;
 }
 
+h2, h3, h4 {
+  font-weight: 400;
+  font-size: 40px;
+}
+
 h1 {
   padding: 0;
   margin: 0;
@@ -27,5 +32,6 @@ h1 {
   img {
     max-width: 100%;
     margin: auto;
+    margin-bottom: $gutter/2;
   }
 }
