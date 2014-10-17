@@ -18,6 +18,10 @@ body > main {
   background: black;
   color: white;
   padding: $gutter;
+
+  @media (max-width: 600px) {
+    padding: $gutter/2;
+  }
 }
 
 h2, h3, h4 {
