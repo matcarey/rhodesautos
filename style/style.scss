@@ -1,7 +1,7 @@
 $gutter: 50px;
 
 html, body {
-  background: #555;
+  background: #888;
   font-family: sans-serif;
   margin: 0 25px;
   padding: 0;
@@ -12,12 +12,20 @@ html, body {
   }
 }
 
+html {
+  padding-bottom: 60px;
+}
+
 body > main {
   max-width: 1000px;
   margin: 0 auto;
   background: black;
   color: white;
   padding: $gutter;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 15px 40px 20px #404040;
+
 
   @media (max-width: 600px) {
     padding: $gutter/2;
