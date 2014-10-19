@@ -27,10 +27,6 @@ module.exports = function(grunt) {
         tasks: ['sass']
       }
     },
-    composer : {
-      options : {
-      }
-    }
   });
   grunt.loadNpmTasks('grunt-php');
   grunt.loadNpmTasks('grunt-phplint');
@@ -39,5 +35,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('dev', ['sass', 'php', 'watch']);
-  grunt.registerTask('build', ['sass', 'composer:install']);
+  grunt.registerTask('build', ['sass']);
 };
