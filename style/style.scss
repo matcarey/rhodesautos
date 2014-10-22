@@ -1,4 +1,13 @@
+@import 'reset';
+
 $gutter: 50px;
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
 
 html, body {
   background: #888 url('/images/bg.png');
@@ -16,7 +25,20 @@ html {
   padding-bottom: 60px;
 }
 
+a.cta {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #bbb;
+  &:hover {
+    color: white;
+  }
+}
+
 body > main {
+  position: relative;
   max-width: 1000px;
   margin: 0 auto;
   background: black;
@@ -26,7 +48,6 @@ body > main {
   border-bottom-right-radius: 30px;
   box-shadow: 0 15px 40px 20px #404040;
 
-
   @media (max-width: 600px) {
     padding: $gutter/2;
   }
@@ -35,6 +56,7 @@ body > main {
 h2, h3, h4 {
   font-weight: 400;
   font-size: 40px;
+  line-height: 1.1
 }
 
 h1 {
@@ -43,7 +65,75 @@ h1 {
   text-align: center;
   img {
     max-width: 100%;
-    margin: auto;
-    margin-bottom: $gutter/2;
+    margin: 0;
+  }
+}
+
+section {
+  h4 {
+    margin-bottom: 10px;
+  }
+  transition: all 0.7s;
+  margin-top: 50px;
+  border: 0 dashed white;
+  border-top-width: 1px;
+  padding-top: 50px;
+  box-sizing: border-box;
+  &.short {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 40px;
+    @media (min-width: 849px) {
+      + section.short {
+        width: 40%;
+        margin-right: -10px;
+        text-align: auto;
+        padding-left: 10px;
+      }
+    }
+    @media (max-width: 850px) {
+      width: auto;
+      display: block;
+      padding-left: 0;
+    }
+  }
+}
+
+body.highlight-contact > main > * {
+  opacity: 0.4;
+  &#contact {
+    opacity: 1;
+    border-width: 1px;
+    padding: 30px;
+  }
+}
+
+#contact a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  padding: 15px 0;
+  li {
+    margin: 0 0 5px 30px;
+  }
+}
+
+dl {
+  margin-top: 10px;
+  +dl {
+    margin-top: 0;
+  }
+  dd, dt {
+    display: inline-block;
+    vertical-align: top;
+  }
+  dt {
+    color: #999;
   }
 }

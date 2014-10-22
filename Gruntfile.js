@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'web/src/style.css' : 'style/style.scss'
+          'web/src/style.css' : ['style/style.scss', 'style/style.scss']
         }
       }
     },
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         files: 'style/style.scss',
         tasks: ['sass']
       }
-    },
+    }
   });
   grunt.loadNpmTasks('grunt-php');
   grunt.loadNpmTasks('grunt-phplint');
